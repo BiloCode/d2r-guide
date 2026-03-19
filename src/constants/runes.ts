@@ -1,0 +1,40 @@
+type Rune = {
+  name: string;
+  order: number;
+};
+
+export const Runes: Record<string, Rune> = {
+  el: { name: "el", order: 1 },
+  eld: { name: "eld", order: 2 },
+  tir: { name: "tir", order: 3 },
+  nef: { name: "nef", order: 4 },
+  eth: { name: "eth", order: 5 },
+  ith: { name: "ith", order: 6 },
+  tal: { name: "tal", order: 7 },
+  ral: { name: "ral", order: 8 },
+  ort: { name: "ort", order: 9 },
+  thul: { name: "thul", order: 10 },
+  amn: { name: "amn", order: 11 },
+  sol: { name: "sol", order: 12 },
+  shael: { name: "shael", order: 13 },
+  dol: { name: "dol", order: 14 },
+  hel: { name: "hel", order: 15 },
+  io: { name: "io", order: 16 },
+  lum: { name: "lum", order: 17 },
+  ko: { name: "ko", order: 18 },
+  fal: { name: "fal", order: 19 },
+  lem: { name: "lem", order: 20 },
+  pul: { name: "pul", order: 21 },
+  um: { name: "um", order: 22 },
+  mal: { name: "mal", order: 23 },
+  ist: { name: "ist", order: 24 },
+  gul: { name: "gul", order: 25 },
+  vex: { name: "vex", order: 26 },
+  ohm: { name: "ohm", order: 27 },
+  lo: { name: "lo", order: 28 },
+  sur: { name: "sur", order: 29 },
+  ber: { name: "ber", order: 30 },
+  jah: { name: "jah", order: 31 },
+  cham: { name: "cham", order: 32 },
+  zod: { name: "zod", order: 33 },
+} as const;
