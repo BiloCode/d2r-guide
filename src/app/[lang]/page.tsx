@@ -1,42 +1,36 @@
-import { Runes } from "@/constants/runes";
-import { Runewords } from "@/constants/runewords";
+import { Home_Options, Home_Titles } from "@/constants/information";
 
-import { RuneIcon } from "@/components/rune-icon";
-import { RunewordCardLink } from "@/components/runeword-card-link";
-import { RunewordDialogShare } from "@/components/runeword-dialog-share";
+import { Wrapper } from "@/components/wrapper";
 
 import { getPageParams } from "@/helpers/server";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-export default async function Home({ params }: PageProps<"/[lang]">) {
+type Props = PageProps<"/[lang]"> & {};
+
+export default async function Home({ params }: Props) {
   const { locale } = await getPageParams(params);
 
   return (
-    <div className="max-w-7xl mx-auto min-h-dvh py-6 px-6 md:py-8 md:px-8">
-      <div className="w-full grid gap-6 md:gap-8">
-        <span className="font-bold text-neutral-400">Lista de runas</span>
-
-        <div className="flex flex-wrap justify-center gap-2">
-          {Object.values(Runes).map((rune) => (
-            <RuneIcon key={rune.order} name={rune.name} />
-          ))}
-        </div>
-
-        <span className="font-bold text-neutral-400">
-          Lista de palabras runicas
-        </span>
-
-        <div className="w-full flex flex-wrap justify-center gap-2">
-          {Object.values(Runewords).map((runeword) => (
-            <RunewordCardLink
-              key={runeword.key}
-              locale={locale}
-              runeword={runeword}
-            />
-          ))}
+    <Wrapper className="w-full min-h-dvh">
+      <div className="grid gap-4">
+        <h1 className="text-[16px] md:text-2xl text-neutral-400 font-bold">
+          {Home_Titles["main"][locale]}
+        </h1>
+        <div className="flex flex-wrap md:grid md:grid-cols-4 gap-2">
+          <Link href={`/${locale}/runewords`} className="w-full outline-none">
+            <Button className="w-full h-12" variant="secondary">
+              {Home_Options["links"]["runewords"][locale]}
+            </Button>
+          </Link>
+          <Button className="w-full h-12" variant="secondary" disabled>
+            {Home_Options["links"]["recipes"][locale]}
+          </Button>
+          <Button className="w-full h-12" variant="secondary" disabled>
+            {Home_Options["links"]["dlc"][locale]}
+          </Button>
         </div>
       </div>
-
-      <RunewordDialogShare locale={locale} />
-    </div>
+    </Wrapper>
   );
 }

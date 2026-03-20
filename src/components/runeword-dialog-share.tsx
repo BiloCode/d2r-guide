@@ -17,20 +17,20 @@ export const RunewordDialogShare = ({ locale }: Props) => {
   const router = useRouter();
   const params = useSearchParams();
 
-  const [isOpen, setIsOpen] = useState(params.get("details") !== null);
+  const [isOpen, setIsOpen] = useState(params.get("dialog") !== null);
 
-  if (params.get("details") === null) {
+  if (params.get("dialog") === null) {
     return <></>;
   }
 
-  const runeword_key = params.get("details") as string;
+  const runeword_key = params.get("dialog") as string;
   const runeword = Runewords[runeword_key];
 
   const onOpenChange = (state: boolean) => {
     if (!state) {
       setIsOpen(false);
       setTimeout(() => {
-        router.push(`/${locale}`, { scroll: false });
+        router.push(`/${locale}/runewords`, { scroll: false });
       }, 300);
     }
   };

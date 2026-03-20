@@ -4,10 +4,10 @@ type Props = {
   name: string;
 };
 
-export const RuneIcon = ({ name }: Props) => (
+export const RuneImage = ({ name }: Props) => (
   <div className="shrink-0">
     <img
-      src={`/images/${name}_rune.png`}
+      src={`/images/runes/${name}_rune.png`}
       alt={`${name} rune`}
       width={48}
       height={48}
