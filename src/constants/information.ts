@@ -22,13 +22,39 @@ export const Home_Options = {
   },
 };
 
-export const Runewords_Subtitles = {
-  rune: {
-    es: "Lista de Runas",
-    en: "Rune List",
+export const Runewords_Titles = {
+  search: {
+    es: "Busca por:",
+    en: "Search by:",
   },
+  search_empty: {
+    es: "No hay resultados para esta búsqueda",
+    en: "No results found",
+  },
+  search_placeholder: {
+    es: "Nombre, Runas y Equipamiento",
+    en: "Name, Runes, and Equipment",
+  },
+  quantity: {
+    es: "Cantidad:",
+    en: "Quantity:",
+  },
+  quantity_list: [
+    { es: "2 runas", en: "2 runes" },
+    { es: "3 runas", en: "3 runes" },
+    { es: "4 runas", en: "4 runes" },
+    { es: "5 runas", en: "5 runes" },
+    { es: "6 runas", en: "6 runes" },
+  ],
+  expansion: {
+    es: "Expansión:",
+    en: "Expansion:",
+  },
+};
+
+export const Runewords_Subtitles = {
   runewords: {
-    es: "Lista de Palabras Runicas",
-    en: "Runeword List",
+    es: "Palabras Runicas",
+    en: "Runewords",
   },
 };

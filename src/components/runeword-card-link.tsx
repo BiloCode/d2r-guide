@@ -23,9 +23,9 @@ export const RunewordCardLink = ({ locale, runeword }: Props) => {
     window.history.replaceState(null, "", ev.currentTarget.href);
   };
 
-  const onOpenChange = (state: boolean) => {
-    setIsOpen(state);
-    window.history.replaceState(null, "", `/${locale}/runewords`);
+  const onClose = () => {
+    setIsOpen(false);
+    window.history.replaceState(null, "", window.location.pathname);
   };
 
   return (
@@ -39,9 +39,11 @@ export const RunewordCardLink = ({ locale, runeword }: Props) => {
       </Link>
       <RunewordDialog
         open={isOpen}
-        onOpenChange={onOpenChange}
-        locale={locale}
-        runeword={runeword}
+        onClose={onClose}
+        metadata={{
+          locale,
+          runeword,
+        }}
       />
     </Fragment>
   );

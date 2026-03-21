@@ -15,13 +15,24 @@ import {
 } from "@/components/ui/dialog";
 
 type Props = DialogProps & {
-  locale: Locale;
-  runeword: Runeword;
+  metadata: {
+    locale: Locale;
+    runeword: Runeword;
+  };
 };
 
-export const RunewordDialog = ({ locale, runeword, ...props }: Props) => {
+export const RunewordDialog = ({ open, metadata, onClose }: Props) => {
+  const { locale, runeword } = metadata;
+
   return (
-    <Dialog {...props}>
+    <Dialog
+      open={open}
+      onOpenChange={(state) => {
+        if (!state) {
+          onClose();
+        }
+      }}
+    >
       <DialogContent className="w-full md:min-w-xl gap-4">
         <DialogHeader className="gap-0 text-center">
           <DialogTitle className="text-xl md:text-2xl font-bold">

@@ -1,48 +1,38 @@
-import { Runes } from "@/constants/runes";
-import { Runewords } from "@/constants/runewords";
 import { Runewords_Subtitles } from "@/constants/information";
 
-import { Wrapper } from "@/components/wrapper";
-import { RuneImage } from "@/components/rune-image";
-import { RunewordCardLink } from "@/components/runeword-card-link";
-import { RunewordDialogShare } from "@/components/runeword-dialog-share";
+import { RunewordProvider } from "@/contexts/runeword-context";
 
-import { getPageParams } from "@/helpers/server";
+import { Wrapper } from "@/components/wrapper";
+import { RunewordList } from "@/components/runeword-list";
+import { RunewordRunes } from "@/components/runeword-runes";
+import { RunewordFilter } from "@/components/runeword-filter";
+import { RunewordDialogServer } from "@/components/runeword-dialog-server";
+
+import { getPageParams, getSearchParams } from "@/helpers/server";
 
 type Props = PageProps<"/[lang]/runewords"> & {};
 
-export default async function RunewordsPage({ params }: Props) {
+export default async function RunewordsPage({ params, searchParams }: Props) {
   const { locale } = await getPageParams(params);
+  const { runewords } = await getSearchParams(searchParams);
 
   return (
-    <Wrapper className="w-full min-h-dvh">
-      <div className="w-full grid gap-6 md:gap-8">
-        <h1 className="font-bold text-[16px] md:text-2xl text-neutral-400">
-          {Runewords_Subtitles["rune"][locale]}
-        </h1>
-
-        <div className="flex flex-wrap justify-center gap-2">
-          {Object.values(Runes).map((rune) => (
-            <RuneImage key={rune.order} name={rune.name} />
-          ))}
+    <RunewordProvider runewords={runewords}>
+      <Wrapper className="w-full">
+        <div className="w-full grid gap-6">
+          <h1 className="w-full text-center font-bold text-[16px] py-2 md:text-2xl text-neutral-400">
+            {Runewords_Subtitles["runewords"][locale]}
+          </h1>
+          <RunewordRunes />
+          <div className="w-full">
+            <div className="sticky top-0 left-0 py-4 bg-neutral-900">
+              <RunewordFilter locale={locale} />
+            </div>
+            <RunewordList locale={locale} />
+          </div>
         </div>
-
-        <h2 className="font-bold text-[16px] md:text-2xl text-neutral-400">
-          {Runewords_Subtitles["runewords"][locale]}
-        </h2>
-
-        <div className="w-full flex flex-wrap justify-center gap-2">
-          {Object.values(Runewords).map((runeword) => (
-            <RunewordCardLink
-              key={runeword.key}
-              locale={locale}
-              runeword={runeword}
-            />
-          ))}
-        </div>
-      </div>
-
-      <RunewordDialogShare locale={locale} />
-    </Wrapper>
+        <RunewordDialogServer locale={locale} />
+      </Wrapper>
+    </RunewordProvider>
   );
 }

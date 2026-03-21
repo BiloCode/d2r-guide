@@ -12,7 +12,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 17",
       en: "Lv. 17",
     },
-    apply_on: {
+    requires: {
       es: ["Armaduras"],
       en: ["Armors"],
     },
@@ -38,6 +38,7 @@ export const Runewords: Record<string, Runeword> = {
         "25% Faster Hit Recovery",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Stealth_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Stealth_Rune_Word",
@@ -54,7 +55,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 19",
       en: "Lv. 19",
     },
-    apply_on: {
+    requires: {
       es: ["Bastones"],
       en: ["Staffs"],
     },
@@ -80,6 +81,7 @@ export const Runewords: Record<string, Runeword> = {
         "Cold Resist +33%",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Leaf_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Leaf_Rune_Word",
@@ -96,7 +98,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 21",
       en: "Lv. 21",
     },
-    apply_on: {
+    requires: {
       es: ["Arcos", "Ballestas"],
       en: ["Bows", "Crossbows"],
     },
@@ -122,6 +124,7 @@ export const Runewords: Record<string, Runeword> = {
         "7% Chance To Cast Level 1 Twister When Struck",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Zephyr_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Zephyr_Rune_Word",
@@ -138,7 +141,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 63",
       en: "Lv. 63",
     },
-    apply_on: {
+    requires: {
       es: ["Armaduras"],
       en: ["Armors"],
     },
@@ -168,6 +171,7 @@ export const Runewords: Record<string, Runeword> = {
         "25% Better Chance of Getting Magic Items",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Chains_of_Honor_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Chains_of_Honor_Rune_Word",
@@ -184,7 +188,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 51",
       en: "Lv. 51",
     },
-    apply_on: {
+    requires: {
       es: ["Armas"],
       en: ["Weapons"],
     },
@@ -216,6 +220,7 @@ export const Runewords: Record<string, Runeword> = {
         "30% Better Chance of Getting Magic Items",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Call_to_Arms_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Call_to_Arms_Rune_Word",
@@ -232,7 +237,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 25",
       en: "Lv. 25",
     },
-    apply_on: {
+    requires: {
       es: ["Armas Melee"],
       en: ["Melee Weapons"],
     },
@@ -254,6 +259,7 @@ export const Runewords: Record<string, Runeword> = {
         "+10 To Vitality",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Strength_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Strength_Rune_Word",
@@ -270,7 +276,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 59",
       en: "Lv. 59",
     },
-    apply_on: {
+    requires: {
       es: ["Armaduras", "Armas"],
       en: ["Armors", "Weapons"],
     },
@@ -350,6 +356,7 @@ export const Runewords: Record<string, Runeword> = {
         },
       },
     ],
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Fortitude_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Fortitude_Rune_Word",
@@ -366,7 +373,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 27",
       en: "Lv. 27",
     },
-    apply_on: {
+    requires: {
       es: ["Yelmos"],
       en: ["Helmets"],
     },
@@ -388,6 +395,7 @@ export const Runewords: Record<string, Runeword> = {
         "+2 To Light Radius",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Lore_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Lore_Rune_Word",
@@ -404,7 +412,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 21",
       en: "Lv. 21",
     },
-    apply_on: {
+    requires: {
       es: ["Cetros"],
       en: ["Scepters"],
     },
@@ -434,6 +442,7 @@ export const Runewords: Record<string, Runeword> = {
         "Level 7 Chain Lightning (60 charges)",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Holy_Thunder_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Holy_Thunder_Rune_Word",
@@ -450,7 +459,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 29",
       en: "Lv. 29",
     },
-    apply_on: {
+    requires: {
       es: ["Escudos"],
       en: ["Shields"],
     },
@@ -474,6 +483,7 @@ export const Runewords: Record<string, Runeword> = {
         "25% Better Chance Of Getting Magic Items",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Rhyme_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Rhyme_Rune_Word",
@@ -490,7 +500,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 53",
       en: "Lv. 53",
     },
-    apply_on: {
+    requires: {
       es: ["Armas de Asta", "Cetros"],
       en: ["Polearms", "Scepters"],
     },
@@ -522,6 +532,7 @@ export const Runewords: Record<string, Runeword> = {
         "Requirements -20%",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Rift_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Rift_Rune_Word",
@@ -538,7 +549,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 35",
       en: "Lv. 35",
     },
-    apply_on: {
+    requires: {
       es: ["Varas"],
       en: ["Wands"],
     },
@@ -566,6 +577,7 @@ export const Runewords: Record<string, Runeword> = {
         "+13 To Mana",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/White_Rune_Word",
       en: "https://diablo.fandom.com/wiki/White_Rune_Word",
@@ -582,7 +594,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 27",
       en: "Lv. 27",
     },
-    apply_on: {
+    requires: {
       es: ["Armas de Asta", "Bastones", "Arcos", "Balletas"],
       en: ["Polearms", "Staffs", "Bows", "Crossbows"],
     },
@@ -614,9 +626,61 @@ export const Runewords: Record<string, Runeword> = {
         "23% Better Chance of Getting Magic Items",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Insight_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Insight_Rune_Word",
+    },
+  },
+  voice_of_reason: {
+    key: "voice_of_reason",
+    runes: ["lem", "ko", "el", "eld"],
+    name: {
+      es: "Voz de la Razón",
+      en: "Voice of Reason",
+    },
+    level: {
+      es: "Nv. 43",
+      en: "Lv. 43",
+    },
+    requires: {
+      es: ["Mazas", "Espadas"],
+      en: ["Maces", "Swords"],
+    },
+    details: {
+      es: [
+        "15% de Posibilidades de Lanzar el Nivel 13 Orbe Helado al Azotar",
+        "18% de Posibilidades de Lanzar el Nivel 20 Explosión de Hielo al Azotar",
+        "+50 de Puntuación de Ataque",
+        "+220-350% Daño a los Demonios (varia)",
+        "+355-375% Daño a los Muertos Vivientes (varia)",
+        "+50 a la Puntuación de Ataque contra Muertos Vivientes",
+        "Añade 100-220 de Daño de Frio",
+        "-24% para Resistencia al Frio Enemigo",
+        "+10 de Destreza",
+        "No Puede Congelarse",
+        "75% Oro Extra de los Monstruos",
+        "+1 al Radio de Luz",
+      ],
+      en: [
+        "15% Chance To Cast Level 13 Frozen Orb On Striking",
+        "18% Chance To Cast Level 20 Ice Blast On Striking",
+        "+50 To Attack Rating",
+        "+220-350% Damage To Demons",
+        "+355-375% Damage To Undead",
+        "+50 To Attack Rating Against Undead",
+        "Adds 100-220 Cold Damage",
+        "-24% To Enemy Cold Resistance",
+        "+10 To Dexterity",
+        "Cannot Be Frozen",
+        "75% Extra Gold From Monsters",
+        "+1 To Light Radius",
+      ],
+    },
+    expansion: "lod",
+    references: {
+      es: "https://diablo.fandom.com/wiki/Voice_of_Reason_Rune_Word",
+      en: "https://diablo.fandom.com/wiki/Voice_of_Reason_Rune_Word",
     },
   },
   duress: {
@@ -630,7 +694,7 @@ export const Runewords: Record<string, Runeword> = {
       en: "Nv. 47",
       es: "Lv. 47",
     },
-    apply_on: {
+    requires: {
       es: ["Armaduras"],
       en: ["Armors"],
     },
@@ -662,6 +726,7 @@ export const Runewords: Record<string, Runeword> = {
         "Poison Resist +15%",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Duress_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Duress_Rune_Word",
@@ -678,7 +743,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 37",
       en: "Lv. 37",
     },
-    apply_on: {
+    requires: {
       es: ["Armaduras"],
       en: ["Armors"],
     },
@@ -702,6 +767,7 @@ export const Runewords: Record<string, Runeword> = {
         "-1 To Light Radius",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Smoke_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Smoke_Rune_Word",
@@ -718,7 +784,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 65",
       en: "Lv. 65",
     },
-    apply_on: {
+    requires: {
       es: ["Armas Melee"],
       en: ["Melee Weapons"],
     },
@@ -748,6 +814,7 @@ export const Runewords: Record<string, Runeword> = {
         "+5 to Frenzy (Barbarian only)",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Fury_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Fury_Rune_Word",
@@ -764,7 +831,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 63",
       en: "Lv. 63",
     },
-    apply_on: {
+    requires: {
       es: ["Martillos", "Cetros", "Hachas"],
       en: ["Hammers", "Scepters", "Axes"],
     },
@@ -798,6 +865,7 @@ export const Runewords: Record<string, Runeword> = {
         "Level 13 Summon Grizzly (5 Charges)",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Beast_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Beast_Rune_Word",
@@ -814,7 +882,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 27",
       en: "Lv. 27",
     },
-    apply_on: {
+    requires: {
       es: ["Armas Melee"],
       en: ["Melee Weapons"],
     },
@@ -846,6 +914,7 @@ export const Runewords: Record<string, Runeword> = {
         "+2 to Mana per Kill",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Honor_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Honor_Rune_Word",
@@ -862,7 +931,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 65",
       en: "Lv. 65",
     },
-    apply_on: {
+    requires: {
       es: ["Armaduras"],
       en: ["Armors"],
     },
@@ -892,9 +961,55 @@ export const Runewords: Record<string, Runeword> = {
         "+1-99% Better Chance of Getting Magic Items (Based On Character Level)",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Enigma_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Enigma_Rune_Word",
+    },
+  },
+  stone: {
+    key: "stone",
+    runes: ["shael", "um", "pul", "lum"],
+    name: {
+      es: "Roca",
+      en: "Stone",
+    },
+    level: {
+      es: "Nv. 47",
+      en: "Lv. 47",
+    },
+    requires: {
+      es: ["Armaduras"],
+      en: ["Armors"],
+    },
+    details: {
+      es: [
+        "+60% Recuperación de Impacto Mas Rápida",
+        "+250-290% Defensa Mejorada (varia)",
+        "+300 Defensa contra Misiles",
+        "+16 de Fuerza",
+        "+16 de Vitalidad",
+        "+10 de Energía",
+        "Todas las Resistencias +15",
+        "Nivel 16 Roca Ígnea (80 Cargas)",
+        "Nivel 16 Golem de Arcilla (16 Cargas)",
+      ],
+      en: [
+        "+60% Faster Hit Recovery",
+        "+250-290% Enhanced Defense",
+        "+300 Defense vs. Missile",
+        "+16 To Strength",
+        "+16 To Vitality",
+        "+10 To Energy",
+        "All Resistances +15",
+        "Level 16 Molten Boulder (80 Charges)",
+        "Level 16 Clay Golem (16 Charges)",
+      ],
+    },
+    expansion: "lod",
+    references: {
+      es: "https://diablo.fandom.com/wiki/Stone_Rune_Word",
+      en: "https://diablo.fandom.com/wiki/Stone_Rune_Word",
     },
   },
   infinity: {
@@ -908,7 +1023,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 63",
       en: "Lv. 63",
     },
-    apply_on: {
+    requires: {
       es: ["Armas de Asta", "Lanzas"],
       en: ["Polearms", "Lances"],
     },
@@ -938,6 +1053,7 @@ export const Runewords: Record<string, Runeword> = {
         "Level 21 Cyclone Armor (30 Charges)",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Infinity_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Infinity_Rune_Word",
@@ -954,7 +1070,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 25",
       en: "Lv. 25",
     },
-    apply_on: {
+    requires: {
       es: ["Espadas", "Escudos"],
       en: ["Swords", "Shields"],
     },
@@ -1030,6 +1146,7 @@ export const Runewords: Record<string, Runeword> = {
         },
       },
     ],
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Spirit_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Spirit_Rune_Word",
@@ -1046,7 +1163,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 59",
       en: "Lv. 59",
     },
-    apply_on: {
+    requires: {
       es: ["Hachas", "Espadas"],
       en: ["Axes", "Swords"],
     },
@@ -1080,6 +1197,7 @@ export const Runewords: Record<string, Runeword> = {
         "+10-15 Life After Each Kill",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Grief_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Grief_Rune_Word",
@@ -1096,7 +1214,7 @@ export const Runewords: Record<string, Runeword> = {
       es: "Nv. 51",
       en: "Lv. 51",
     },
-    apply_on: {
+    requires: {
       es: ["Yelmos"],
       en: ["Helmets"],
     },
@@ -1126,6 +1244,7 @@ export const Runewords: Record<string, Runeword> = {
         "Level 17 Attract (60 Charges)",
       ],
     },
+    expansion: "lod",
     references: {
       es: "https://diablo.fandom.com/wiki/Delirium_Rune_Word",
       en: "https://diablo.fandom.com/wiki/Delirium_Rune_Word",

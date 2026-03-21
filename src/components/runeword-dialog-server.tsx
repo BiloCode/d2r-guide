@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 import type { Locale } from "@/typings/locale";
 
@@ -13,8 +13,7 @@ type Props = {
   locale: Locale;
 };
 
-export const RunewordDialogShare = ({ locale }: Props) => {
-  const router = useRouter();
+export const RunewordDialogServer = ({ locale }: Props) => {
   const params = useSearchParams();
 
   const [isOpen, setIsOpen] = useState(params.get("dialog") !== null);
@@ -26,21 +25,19 @@ export const RunewordDialogShare = ({ locale }: Props) => {
   const runeword_key = params.get("dialog") as string;
   const runeword = Runewords[runeword_key];
 
-  const onOpenChange = (state: boolean) => {
-    if (!state) {
-      setIsOpen(false);
-      setTimeout(() => {
-        router.push(`/${locale}/runewords`, { scroll: false });
-      }, 300);
-    }
+  const onClose = () => {
+    setIsOpen(false);
+    window.history.replaceState(null, "", window.location.pathname);
   };
 
   return (
     <RunewordDialog
-      locale={locale}
-      runeword={runeword}
       open={isOpen}
-      onOpenChange={onOpenChange}
+      onClose={onClose}
+      metadata={{
+        locale,
+        runeword,
+      }}
     />
   );
 };
