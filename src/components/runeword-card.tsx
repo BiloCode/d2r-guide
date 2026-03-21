@@ -23,7 +23,7 @@ export const RunewordCard = ({ locale, runeword }: Props) => (
       ))}
     </div>
     <div className="min-h-5 flex flex-wrap gap-1 justify-center">
-      {runeword.apply_on[locale].map((apply) => (
+      {runeword.requires[locale].map((apply) => (
         <Badge key={apply}>{apply}</Badge>
       ))}
     </div>

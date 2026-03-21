@@ -13,7 +13,7 @@ type Props = {
   locale: Locale;
 };
 
-export const RunewordDialogShare = ({ locale }: Props) => {
+export const RunewordDialogServer = ({ locale }: Props) => {
   const router = useRouter();
   const params = useSearchParams();
 

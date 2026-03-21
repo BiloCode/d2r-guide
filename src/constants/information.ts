@@ -23,12 +23,8 @@ export const Home_Options = {
 };
 
 export const Runewords_Subtitles = {
-  rune: {
-    es: "Lista de Runas",
-    en: "Rune List",
-  },
   runewords: {
-    es: "Lista de Palabras Runicas",
-    en: "Runeword List",
+    es: "Palabras Runicas",
+    en: "Runewords",
   },
 };
