@@ -14,6 +14,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
+import { RunewordDialogOption } from "@/components/runeword-dialog-option";
+
 type Props = DialogProps & {
   metadata: {
     locale: Locale;
@@ -48,12 +50,7 @@ export const RunewordDialog = ({ open, metadata, onClose }: Props) => {
         {typeof runeword.details !== "undefined" && (
           <div className="grid cursor-default text-center">
             {runeword.details?.[locale].map((option, index) => (
-              <p
-                key={index}
-                className="py-1 text-sm font-light text-neutral-600 hover:text-neutral-900"
-              >
-                {option}
-              </p>
+              <RunewordDialogOption key={index} option={option} />
             ))}
           </div>
         )}
@@ -71,12 +68,11 @@ export const RunewordDialog = ({ open, metadata, onClose }: Props) => {
               <TabsContent key={tab.key} value={tab.key}>
                 <div className="grid cursor-default">
                   {tab.items[locale].map((option, index) => (
-                    <p
+                    <RunewordDialogOption
                       key={index}
-                      className="py-1 text-sm font-light text-neutral-600 hover:text-neutral-900 text-center"
-                    >
-                      {option}
-                    </p>
+                      option={option}
+                      className="text-center"
+                    />
                   ))}
                 </div>
               </TabsContent>
@@ -86,11 +82,11 @@ export const RunewordDialog = ({ open, metadata, onClose }: Props) => {
 
         <div className="w-full h-px bg-neutral-200"></div>
 
-        <div className="flex justify-center">
+        <div className="w-full flex justify-center">
           <a
             href={runeword.references[locale]}
             target="_blank"
-            className="text-blue-700 hover:underline text-center"
+            className="text-xs md:text-sm text-blue-700 hover:underline text-center"
           >
             {runeword.references[locale]}
           </a>
