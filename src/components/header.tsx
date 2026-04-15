@@ -4,6 +4,8 @@ import type { Locale } from "@/typings/locale";
 
 import { Wrapper } from "@/components/wrapper";
 
+import { Navigation } from "@/constants/information";
+
 type Props = {
   locale: Locale;
 };
@@ -18,16 +20,35 @@ export const Header = ({ locale }: Props) => (
       className="w-full h-full object-cover object-center opacity-40"
     />
     <div className="absolute w-full h-full top-0 left-0 flex items-center">
-      <Wrapper className="py-0!">
-        <Link href={`/${locale}`} className="inline-block w-max">
+      <Wrapper className="flex py-0! justify-between items-center">
+        <Link href={`/${locale}`} className="shrink-0 w-max">
           <img
             src="/images/d2r_logo.png"
             width={96}
             height={96}
             className="size-12 md:size-24 shrink-0"
-            alt="Diablo 2 Resurrect Logo"
+            alt="Diablo 2 Resurrected Logo"
           />
         </Link>
+
+        <ul className="hidden md:flex  gap-8">
+          {Navigation.map((item) => (
+            <li key={item.key}>
+              {item.disabled ? (
+                <span className="font-medium text-gray-400/60">
+                  {item.name[locale]}
+                </span>
+              ) : (
+                <Link
+                  href={`/${locale}${item.url}`}
+                  className="font-medium text-gray-300 hover:underline"
+                >
+                  {item.name[locale]}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
       </Wrapper>
     </div>
   </header>

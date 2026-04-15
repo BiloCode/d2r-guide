@@ -1,34 +1,26 @@
 import "../globals.css";
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Montserrat } from "next/font/google";
 
 import { Header } from "@/components/header";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 import { cn } from "@/lib/utils";
+
 import { getPageParams } from "@/helpers/server";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { DeviceProvider } from "@/providers/device-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "D2R Guides",
+  title: "Diablo II",
   icons: {
-    icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+    icon: [{ url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" }],
   },
 };
 
@@ -44,21 +36,19 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={cn(
-        "h-full",
-        "antialiased",
-        geistSans.variable,
-        geistMono.variable,
-        "font-sans",
-        inter.variable,
-      )}
+      className={cn("w-full h-full", "antialiased", montserrat.variable)}
     >
       <body className="min-h-full flex flex-col bg-neutral-900">
         <TooltipProvider>
-          <div className="w-full min-h-dvh">
-            <Header locale={locale} />
-            {children}
-          </div>
+          <DeviceProvider>
+            <div id="modals" />
+            <div className="w-full flex flex-col min-h-dvh">
+              <div className="shrink-0">
+                <Header locale={locale} />
+              </div>
+              <div className="flex-1">{children}</div>
+            </div>
+          </DeviceProvider>
         </TooltipProvider>
       </body>
     </html>

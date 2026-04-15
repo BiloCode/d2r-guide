@@ -1,0 +1,2 @@
+export const ANIMATION_DURATION = 200;
+export const ANIMATION_OPEN_DELAY = 10;
