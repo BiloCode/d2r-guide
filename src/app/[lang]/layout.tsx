@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Diablo II",
+  title: "Diablo II Guides",
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" }],
   },
